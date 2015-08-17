@@ -14,7 +14,7 @@ fi
 
 mkdir ${TEMP_IPA_BUILT}
 echo "unzip the ipa"
-unzip -q "${IPA}.ipa" -d "${TEMP_IPA_BUILT}"
+unzip -q "${IPA}" -d "${TEMP_IPA_BUILT}"
 
 echo "+ Adding SWIFT support (if necessary)"
 mkdir -p "${TEMP_IPA_BUILT}/SwiftSupport"
@@ -28,5 +28,5 @@ rm -rf "${IPA}"
 
 echo "+ zip --symlinks --verbose --recurse-paths ${IPA} ."
 cd "${TEMP_IPA_BUILT}"
-zip --symlinks --verbose --recurse-paths "${IPA}.ipa" .
+zip --symlinks --verbose --recurse-paths "${IPA}" .
 echo "===ADDING SWIFT_LIB SUCCESS===" 
